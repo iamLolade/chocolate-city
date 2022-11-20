@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Box } from '@chakra-ui/react'
-import Table from './common/ArtistTable'
+import Header from './common/Header';
+import Table from './common/Table'
 import http from '../services/httpService';
 import axios from 'axios';
 
@@ -34,6 +35,11 @@ export default function ArtistList() {
     }, [])
 
     return (
-        <Box w='100%' borderRadius={10}><Table header={tableColumns} data={artists} /></Box>
+        <Box w='100%'>
+            <Header title='All Chocolate City Artist Artists'/>
+            <Box borderRadius={10} mt={4}>
+                <Table header={tableColumns} data={artists} />
+            </Box>
+        </Box>
     )
 }

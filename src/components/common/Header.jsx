@@ -7,7 +7,7 @@ export default function Header({ title }) {
     <Heading as='h3'>
         <Highlight 
             query='Chocolate City'
-            styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue', color: '#fff' }}
+            styles={{ px: '3', py: '1', borderRadius: '3em', bg: 'blue', color: '#fff' }}
         >
             {title}
         </Highlight>

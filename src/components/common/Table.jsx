@@ -1,10 +1,10 @@
-import { Table, Avatar, Box, Center, Flex, Tbody, Td, Text, Th, Thead, Tr, Icon } from '@chakra-ui/react';
-import Spinner from '../Spinner';
+import { Table as CTable, Avatar, Box, Center, Flex, Tbody, Td, Text, Th, Thead, Tr, Icon } from '@chakra-ui/react';
+import Spinner from './Spinner';
 
-export default function ArtistTable({ header=[], data = [] }) {
+export default function Table({ header=[], data = [] }) {
   return (
-    <Center mt={6} overflowY='auto' borderRadius='10px 10px 10px 10px' h={["100%"]} w='100%'>
-        <Table whiteSpace='nowrap'>
+    <Center borderRadius='10px 10px 10px 10px'>
+        <CTable whiteSpace='nowrap'>
             <Thead>
                 <Tr
                     bg='rgba(19, 74, 112, 0.05)'
@@ -31,7 +31,7 @@ export default function ArtistTable({ header=[], data = [] }) {
                             p={12}
                             m={2}
                             cursor='pointer'
-                            _hover={{ transform: 'scale(1.03)', color: '#062F36'}}
+                            _hover={{ transform: 'scale(1.02)', color: '#062F36'}}
                         >
                             <Td p={6}>
                                 <Text fontSize={{ base: 10, xl: 12, '2xl': 14 }} fontWeight={500} textTransform='capitalize'>{artist?.name}</Text>
@@ -48,7 +48,7 @@ export default function ArtistTable({ header=[], data = [] }) {
                         </Tr>
                     ))}
             </Tbody>
-        </Table>
+        </CTable>
     </Center>
   )
 }
