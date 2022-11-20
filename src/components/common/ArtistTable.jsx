@@ -20,7 +20,7 @@ export default function ArtistTable({ header=[], data = [] }) {
             </Thead>
 
             <Tbody borderRadius='10px' h={["100%"]} overflowY='auto' p={2}>
-                    {data.length === 0 && <Spinner mt={2}/>}
+                    {data.length === 0 && <Spinner mt={2} size='xl' />}
 
                     {data.map((artist) => (
                         <Tr

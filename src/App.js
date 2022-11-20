@@ -11,9 +11,9 @@ function App() {
     <>
       <ToastContainer />
       <Navbar />
-      <Box p={20} mt={10}>
+      <Box p={30} mt={10}>
         <main>
-          <Header title='All Chocolate City Artist Artists' />
+          <Header title='All Chocolate City Artist Artists'/>
           <Box p={20} mt={10}>
             <ArtistList />
           </Box>
