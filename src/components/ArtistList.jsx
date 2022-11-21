@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Box } from '@chakra-ui/react'
-import Navbar from './Navbar';
+import { Box, Center, Flex } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom';
+import Navbar from './common/Navbar';
 import Header from './common/Header';
 import Table from './common/Table'
 import axios from 'axios';
@@ -27,6 +28,7 @@ const tableColumns = [
 
 export default function ArtistList() {
     const [artists, setArtists] = useState([])
+	const navigate = useNavigate()
 
     useEffect(() => {
         axios.get('https://jsonplaceholder.typicode.com/users').then((res) => {
@@ -34,13 +36,19 @@ export default function ArtistList() {
         })
     }, [])
 
+	const handleNavigation = (str) => navigate(str)
+
     return (
-        <Box w='100%'>
+        <Flex w='100vw' direction='column'>
 			<Navbar />
-            <Header title='All Chocolate City Artist Artists'/>
-            <Box borderRadius={10} mt={4}>
-                <Table header={tableColumns} data={artists} />
-            </Box>
-        </Box>
+			<Center>
+				<Flex direction='column' alignItems='space-between' justify='center'>
+					<Header mt={50} title='All Chocolate City Artist Artists'/>
+					<Box borderRadius={10} mt={50}>
+						<Table header={tableColumns} data={artists} handleNavigation={handleNavigation}/>
+					</Box>
+				</Flex>
+			</Center>
+        </Flex>
     )
 }

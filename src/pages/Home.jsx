@@ -9,11 +9,11 @@ export default function Home() {
         <Text fontSize={72} fontWeight={700}>
             Chocolate City
         </Text>
-        {/* <Link to='/artist'> */}
-            <Button variant='solid' size='xl'>
+        <Link to='/artist'>
+            <Button variant='solid' size='xl' cursor='pointer'>
                 View Artists
             </Button>
-        {/* </Link> */}
+        </Link>
     </Flex>
   )
 }

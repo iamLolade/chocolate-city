@@ -1,8 +1,7 @@
 import React from "react";
-import { Route, Routes, Redirect } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { Box, Heading, Highlight, Text } from "@chakra-ui/react";
-import Navbar from "./components/Navbar";
+import { Box } from "@chakra-ui/react";
 import Home from "./pages/Home";
 import ArtistList from "./components/ArtistList";
 import ArtistDetails from "./components/ArtistDetails";

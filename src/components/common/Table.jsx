@@ -1,9 +1,7 @@
 import { Table as CTable, Center, Tbody, Td, Text, Th, Thead, Tr } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
 import Spinner from './Spinner';
 
-export default function Table({ header=[], data = [] }) {
-    const navigate = useNavigate()
+export default function Table({ header=[], data = [], handleNavigation }) {
     
     return (
         <Center borderRadius='10px 10px 10px 10px'>
@@ -35,7 +33,7 @@ export default function Table({ header=[], data = [] }) {
                                 m={2}
                                 cursor='pointer'
                                 _hover={{ transform: 'scale(1.02)', color: '#062F36'}}
-                                onClick={() => navigate(`/${artist.id}`)}
+                                onClick={() => handleNavigation(`/artist/${artist.id}`)}
                             >
                                 <Td p={6}>
                                     <Text fontSize={{ base: 10, xl: 12, '2xl': 14 }} fontWeight={500} textTransform='capitalize'>{artist?.name}</Text>
