@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Box } from '@chakra-ui/react'
+import Navbar from './Navbar';
 import Header from './common/Header';
 import Table from './common/Table'
-import http from '../services/httpService';
 import axios from 'axios';
 
 const tableColumns = [
@@ -36,6 +36,7 @@ export default function ArtistList() {
 
     return (
         <Box w='100%'>
+			<Navbar />
             <Header title='All Chocolate City Artist Artists'/>
             <Box borderRadius={10} mt={4}>
                 <Table header={tableColumns} data={artists} />

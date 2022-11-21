@@ -1,4 +1,4 @@
-import { Center, Heading, Highlight, Text } from "@chakra-ui/react";
+import { Heading, Highlight } from "@chakra-ui/react";
 
 import React from 'react'
 
