@@ -8,7 +8,7 @@ import List from './common/List'
 import { Box, Stack, Flex, Image, Tooltip, useDisclosure } from '@chakra-ui/react'
 import AddTweet from './common/AddTweet'
 import twitter from '../public/icons/twitter.png'
-import album from '../public/icons/music-album.png'
+import album from '../public/icons/album.png'
 
 export default function ArtistDetails() {
 
@@ -37,7 +37,7 @@ export default function ArtistDetails() {
       <AddTweet isOpen={isOpen} onClose={onClose} />
       <Navbar />
       <Stack direction={['column', 'row']} spacing={8} d='flex' justifyContent='space-around' mt={80}>
-        <Box w='full' boxShadow='0px 0px 8px 4px rgba(19, 74, 112, 0.1)' borderRadius='10px' p={16}>
+        <Box w='full' boxShadow='0px 0px 8px 4px rgba(19, 74, 112, 0.1)' borderRadius='10px' p={16} bg='#fff'>
           <Flex alignItems='center'>
             <Image src={album} w={32} h={32} ml={30} />
             <Header title='Albums' ml={10} />
@@ -46,7 +46,7 @@ export default function ArtistDetails() {
             <List data={albums} />
           </Box>
         </Box>
-        <Box w='full' boxShadow='0px 0px 8px 4px rgba(19, 74, 112, 0.1)' borderRadius='10px' p={10}>
+        <Box w='full' boxShadow='0px 0px 8px 4px rgba(19, 74, 112, 0.1)' borderRadius='10px' p={10} bg='#fff'>
           <Flex justify='space-between' alignItems='center'>
             <Box>
               <Header title='Tweets' ml={10} />

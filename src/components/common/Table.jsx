@@ -5,7 +5,7 @@ export default function Table({ header=[], data = [], handleNavigation }) {
     
     return (
         <Center borderRadius='10px 10px 10px 10px'>
-            <CTable whiteSpace='nowrap'>
+            <CTable whiteSpace='nowrap' bg='#fff'>
                 <Thead>
                     <Tr
                         bg='rgba(19, 74, 112, 0.05)'
@@ -20,7 +20,7 @@ export default function Table({ header=[], data = [], handleNavigation }) {
                     </Tr>
                 </Thead>
 
-                <Tbody borderRadius='10px' h={["100%"]} overflowY='auto' p={2}>
+                <Tbody borderRadius='10px' h={["100%"]} overflowY='auto' p={2} bg='#fff'>
                         {data.length === 0 && <Spinner mt={2} size='xl' />}
 
                         {data.map((artist) => (
