@@ -27,7 +27,7 @@ export default function Home() {
                     border='none'
                     borderRadius={3}
                     p={8}
-                    _hover={{background: 'rgb(0,1,238,0.5)'}}
+                    _hover={{background: 'rgb(0,1,238,0.7)'}}
                 >
                     View Artists
                 </Button>
