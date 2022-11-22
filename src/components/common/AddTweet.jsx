@@ -36,7 +36,7 @@ const AddTweet = ({ isOpen, onClose }) => {
                                         />
                                     </Box>
                                 </Stack>
-                                <Button mt={20} p={8} fontSize={18} border='none' fontWeight={600} color='#fff' bg='#03A9F4' borderRadius={6}>Tweet</Button>
+                                <Button mt={20} p={8} fontSize={18} border='none' fontWeight={600} color='#fff' bg='#03A9F4' borderRadius={6} cursor='pointer'>Tweet</Button>
                                 <Text m={20} fontSize={14} fontWeight={600} cursor='pointer' color='#134A70' as='u' onClick={onClose}>Close</Text>
                             </Center>
                         </form>

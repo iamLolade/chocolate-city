@@ -32,6 +32,10 @@ export default function ArtistDetails() {
       })
   }, [id])
 
+  const handleDelete = () => {
+    axios.delete('https://jsonplaceholder.typicode.com/comments/')
+  }
+
   return (
     <Box>
       <AddTweet isOpen={isOpen} onClose={onClose} />
