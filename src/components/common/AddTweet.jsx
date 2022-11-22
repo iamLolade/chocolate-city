@@ -3,18 +3,12 @@ import {
     Center,
     Text,
 	Stack,
-	Flex,
 	Modal,
 	ModalOverlay,
-	ModalCloseButton,
 	ModalContent,
-	ModalFooter,
 	ModalBody,
-	FormControl,
-	FormLabel,
 	Textarea,
 	Button,
-	Input
 } from '@chakra-ui/react';
 
 const AddTweet = ({ isOpen, onClose }) => {

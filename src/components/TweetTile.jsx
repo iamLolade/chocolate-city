@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Box, Text, useDisclosure } from '@chakra-ui/react'
+import { Flex, Box, Text } from '@chakra-ui/react'
 import { Icon } from '@chakra-ui/react'
 import { HiDotsVertical } from 'react-icons/hi'
 

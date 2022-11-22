@@ -24,13 +24,13 @@ export default function ArtistDetails() {
       axios.get('https://jsonplaceholder.typicode.com/albums').then((res) => {
           setAlbums(res?.data?.filter((album) => album.userId === parseInt(id)))
       })
-  }, [])
+  }, [id])
 
   useEffect(() => {
       axios.get('https://jsonplaceholder.typicode.com/comments').then((res) => {
           setTweets(res?.data?.filter(tweet => tweet.postId === parseInt(id)))
       })
-  }, [])
+  }, [id])
 
   return (
     <Box>

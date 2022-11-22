@@ -1,9 +1,6 @@
 import React from 'react'
 import {
-    Box,
     ListItem,
-    ListIcon,
-    OrderedList,
     UnorderedList,
 } from '@chakra-ui/react'
 import Spinner from './Spinner'

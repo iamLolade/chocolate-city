@@ -29,22 +29,22 @@ export default function Table({ header=[], data = [], handleNavigation }) {
                                 boxShadow='10px 10px 20px rgba(54, 171, 190, 0.05)'
                                 borderRadius='10px'
                                 bg='white.300'
-                                p={12}
+                                p={18}
                                 m={2}
                                 cursor='pointer'
                                 _hover={{ transform: 'scale(1.02)', color: '#062F36'}}
                                 onClick={() => handleNavigation(`/artist/${artist.id}`)}
                             >
-                                <Td p={6}>
+                                <Td p={10}>
                                     <Text fontSize={{ base: 10, xl: 12, '2xl': 14 }} fontWeight={500} textTransform='capitalize'>{artist?.name}</Text>
                                 </Td>
-                                <Td p={6}>
+                                <Td p={10}>
                                     <Text fontSize={{ base: 10, xl: 12, '2xl': 14 }} fontWeight={500} textTransform='capitalize'>{artist?.username}</Text>
                                 </Td>
-                                <Td p={6}>
+                                <Td p={10}>
                                     <Text fontSize={{ base: 10, xl: 12, '2xl': 14 }} fontWeight={500} textTransform='capitalize'>{artist?.email}</Text>
                                 </Td>
-                                <Td p={6}>
+                                <Td p={10}>
                                     <Text fontSize={{ base: 10, xl: 12, '2xl': 14 }} fontWeight={500} textTransform='capitalize'>{artist?.address?.city}</Text>
                                 </Td>
                             </Tr>

@@ -5,7 +5,6 @@ import Navbar from './common/Navbar';
 import Header from './common/Header';
 import Table from './common/Table'
 import axios from 'axios';
-import bgImage from '../public/icons/Vector.svg'
 
 const tableColumns = [
 	{
