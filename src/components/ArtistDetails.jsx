@@ -33,7 +33,7 @@ export default function ArtistDetails() {
   }, [id])
 
   const handleDelete = () => {
-    axios.delete('https://jsonplaceholder.typicode.com/comments/')
+    axios.delete('https://jsonplaceholder.typicode.com/comments/id')
   }
 
   return (
@@ -59,7 +59,7 @@ export default function ArtistDetails() {
               <Image src={twitter} w={32} h={32} mr={10} cursor='pointer' onClick={onOpen} />
             </Tooltip>
           </Flex>
-          <TweetTile data={tweets} />
+          <TweetTile data={tweets} handleDelete={handleDelete} />
         </Box>
       </Stack>
     </Box>
