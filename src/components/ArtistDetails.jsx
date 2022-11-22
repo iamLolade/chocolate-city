@@ -44,7 +44,7 @@ export default function ArtistDetails() {
         <Box w='full' boxShadow='0px 0px 8px 4px rgba(19, 74, 112, 0.1)' borderRadius='10px' p={16} bg='#fff'>
           <Flex alignItems='center'>
             <Image src={album} w={32} h={32} ml={30} />
-            <Header title='Albums' ml={10} />
+            <Header title='Albums' ml={10} fontFamily='Pacifico' />
           </Flex>
           <Box mt={30} ml={20} w='80%'>
             <List data={albums} />
@@ -53,7 +53,7 @@ export default function ArtistDetails() {
         <Box w='full' boxShadow='0px 0px 8px 4px rgba(19, 74, 112, 0.1)' borderRadius='10px' p={10} bg='#fff'>
           <Flex justify='space-between' alignItems='center'>
             <Box>
-              <Header title='Tweets' ml={10} />
+              <Header title='Tweets' ml={10} fontFamily='Pacifico' />
             </Box>
             <Tooltip label='ADD TWEET' fontSize={12} fontWeight={500} bg='#03A9F4' color='#fff' p={2} borderRadius={3}>
               <Image src={twitter} w={32} h={32} mr={10} cursor='pointer' onClick={onOpen} />

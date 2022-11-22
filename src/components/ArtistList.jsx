@@ -41,6 +41,7 @@ export default function ArtistList() {
     return (
         <Flex w='100vw' direction='column'>
 			<Navbar />
+			<div className="verlay"></div>
 			<Center>
 				<Flex direction='column' alignItems='space-between' justify='center'>
 					<Header mt={50} title='All Chocolate City Artist Artists'/>
