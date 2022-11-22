@@ -13,20 +13,21 @@ export default function Home() {
             <Text fontSize={100} fontWeight={700}>
                 Chocolate City
             </Text>
-            <Link to='/artist' decoration='none'>
+            <Link to='/artist' decoration='none' bg='0001EE' _hover={{background: '#0001EE'}}>
                 <Button
                     as='b'
                     variant='solid'
                     fontSize={18}
                     fontWeight={900}
                     cursor='pointer'
-                    color='#03A9F4'
-                    bg='#fff'
+                    color='#fff'
+                    bg='0001EE'
                     textDecoration='none'
                     textTransform='uppercase'
                     border='none'
                     borderRadius={3}
                     p={8}
+                    _hover={{background: 'rgb(0,1,238,0.5)'}}
                 >
                     View Artists
                 </Button>
