@@ -11,7 +11,7 @@ import { Icon } from '@chakra-ui/react'
 import { HiDotsVertical } from 'react-icons/hi'
 import { RiEditFill, RiDeleteBin5Line } from 'react-icons/ri'
 
-export default function Menu() {
+export default function Menu({ data, handleDelete }) {
   return (
     <CMenu>
         <MenuButton bg='transparent' border='none' cursor='pointer'>
@@ -25,7 +25,7 @@ export default function Menu() {
             </Tooltip>
             <MenuDivider border='.5px solid #eee' />
             <Tooltip label='Delete' fontSize={12} fontWeight={500} bg='#03A9F4' color='#fff' p={2} borderRadius={3}>
-                <MenuItem border='none' justifyContent='end' p={8} m={4} bg='#fff' cursor='pointer'>
+                <MenuItem border='none' justifyContent='end' p={8} m={4} bg='#fff' cursor='pointer' onClick={() => handleDelete(data?.id)}>
                     <Icon as={RiDeleteBin5Line} w={30} h={20}/>
                 </MenuItem>
             </Tooltip>

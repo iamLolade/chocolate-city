@@ -5,7 +5,7 @@ import Header from './common/Header'
 import Navbar from './common/Navbar'
 import TweetTile from './TweetTile'
 import List from './common/List'
-import { Box, Stack, Flex, Image, Tooltip, useDisclosure } from '@chakra-ui/react'
+import { Box, Stack, Flex, Image, Text, Tooltip, useDisclosure } from '@chakra-ui/react'
 import AddTweet from './common/AddTweet'
 import twitter from '../public/icons/twitter.png'
 import album from '../public/icons/album.png'
@@ -16,9 +16,6 @@ export default function ArtistDetails() {
   const [tweets, setTweets] = useState([])
   const {id} = useParams()
   const { isOpen, onOpen, onClose } = useDisclosure()
-
-  console.log('Albums: ', albums.filter((album) => album.userId === Number(id)))
-  console.log('Tweets: ', tweets)
 
   useEffect(() => {
       axios.get('https://jsonplaceholder.typicode.com/albums').then((res) => {
@@ -32,8 +29,11 @@ export default function ArtistDetails() {
       })
   }, [id])
 
-  const handleDelete = () => {
-    axios.delete('https://jsonplaceholder.typicode.com/comments/id')
+  const handleDelete = (id) => {
+    const oldTweets = [...tweets]
+    axios.delete(`https://jsonplaceholder.typicode.com/comments/${id}`)
+    const newTweets = oldTweets.filter(tweet => tweet.id !== id)
+    setTweets(newTweets)
   }
 
   return (
@@ -59,7 +59,7 @@ export default function ArtistDetails() {
               <Image src={twitter} w={32} h={32} mr={10} cursor='pointer' onClick={onOpen} />
             </Tooltip>
           </Flex>
-          <TweetTile data={tweets} handleDelete={handleDelete} />
+          {tweets.length === 0 ? <Text fontSize={20} m={60}>No tweets...</Text> : <TweetTile data={tweets} handleDelete={handleDelete} />}
         </Box>
       </Stack>
     </Box>
